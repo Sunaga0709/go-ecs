@@ -20,6 +20,10 @@ permissions:
 
 jobs:
   terraform:
+    defaults:
+      run:
+        working-directory: infra
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
