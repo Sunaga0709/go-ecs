@@ -40,6 +40,9 @@ jobs:
           role-to-assume: ${{ env.OIDC_ARN }}
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+
       - name: Terraform Format
         id: fmt
         run: terraform fmt -check
