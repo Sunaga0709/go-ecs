@@ -56,19 +56,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: terraform plan -no-color -input=false
-
-      - name: tf destroy
-        id: destroy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: terraform destroy -auto-approve
-
-      # - name: Terraform Plan Status
-      #   if: steps.plan.outcome == 'failure'
-      #   run: exit 1
-      #
-      # - name: Terraform Apply
-      #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.SGITHUB_TOKEN }}
-      #   run: terraform apply -auto-approve -input=false
+# ローカルから操作するために以下コメントアウト
+# - name: Terraform Plan Status
+#   if: steps.plan.outcome == 'failure'
+#   run: exit 1
+#
+# - name: Terraform Apply
+#   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+#   env:
+#     GITHUB_TOKEN: ${{ secrets.SGITHUB_TOKEN }}
+#   run: terraform apply -auto-approve -input=false
