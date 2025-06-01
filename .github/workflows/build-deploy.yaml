@@ -53,7 +53,8 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          file: ./Dockerfile
+          file: Dockerfile
+          context: .
           tags: |
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}
           cache-from: type=local,src=/tmp/.buildx-cache
