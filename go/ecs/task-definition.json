@@ -4,9 +4,7 @@
   "networkMode": "awsvpc",
   "cpu": "256",
   "memory": "512",
-  "requiresCompatibilities": [
-    "FARGATE"
-  ],
+  "requiresCompatibilities": ["FARGATE"],
   "containerDefinitions": [
     {
       "name": "sunaga-go-ecs",
@@ -22,7 +20,7 @@
         "logDriver": "awslogs",
         "options": {
           "awslogs-group": "/aws/ecs/sunaga-go-ecs",
-          "awslogs-regions": "ap-northeast-1",
+          "awslogs-region": "ap-northeast-1",
           "awslogs-stream-prefix": "sunaga-go-ecs-app"
         }
       },
