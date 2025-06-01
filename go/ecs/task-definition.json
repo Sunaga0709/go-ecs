@@ -1,6 +1,7 @@
 {
   "family": "sunaga-go-ecs",
   "taskRoleArn": "arn:aws:iam::032148049089:role/sunaga-go-ecs-ecs-task",
+  "executionRoleArn": "arn:aws:iam::032148049089:role/sunaga-go-ecs-ecs",
   "networkMode": "awsvpc",
   "cpu": "256",
   "memory": "512",
